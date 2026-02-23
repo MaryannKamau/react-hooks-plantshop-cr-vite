@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 
 
 
@@ -10,7 +10,7 @@ import React from "react";
     <li className="card" data-testid="plant-item">
       <img src={"https://via.placeholder.com/400"} alt={plant.name} />
       <h4>{plant.name}</h4>
-      <p>Price: ${plant.price}</p>
+      <p>Price: {plant.price}</p>
       {inStock ? (
         <button className="primary"onClick={() => setInStock(false)}>In Stock</button>
       ) : (

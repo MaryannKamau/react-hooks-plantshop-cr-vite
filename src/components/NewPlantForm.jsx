@@ -6,7 +6,7 @@ function NewPlantForm({ onAddPlant }) {
   
   function handleSubmit(e) {
     e.preventDefault();
-    onAddPlant({ ...formData, price: parseFloat(formData.price) });
+    onAddPlant({ ...formData, price: formData.price.toString() }); // Ensure price is a string
     setFormData({ name: "", image: "", price: "" }); // Reset form
   }
   
